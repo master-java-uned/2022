@@ -22,9 +22,10 @@ public class NumeroDeReferencia {
                 throw new SuministrosException("El año debe tener 4 digitos");
             }
         }
-        public static void addSecuencia(Categoria c) throws SuministrosException{
+        public static void nextSecuencia(Categoria c) throws SuministrosException{
                 int i = ultimaSecuencia.get(c).intValue();
-                ultimaSecuencia.put(c, i++);
+                i++;
+                ultimaSecuencia.put(c, i);
         }
         public static int getSecuencia(Categoria c){
             if (c instanceof Categoria){
@@ -41,11 +42,11 @@ public class NumeroDeReferencia {
         this.SECUENCIA_MAXIMA = 99999;
         if (categoria instanceof Categoria) {
             // Empezamos con el código añadiendo la categoria.
-            this.codigo = categoria.toString();
+            this.codigo = categoria.toString() + " - ";
             // Después añadimos el ultimoAño
-            this.codigo += NumeroDeReferencia.ultimoAño;
+            this.codigo += NumeroDeReferencia.ultimoAño + " # ";
             // Para terminar debe tener un código de 5 digitos que se reinicia por cada año y categoria
-            NumeroDeReferencia.addSecuencia(categoria);
+            NumeroDeReferencia.nextSecuencia(categoria);
             this.codigo += getSecuencia(categoria);
         }else{
             // Me colaron un null...
