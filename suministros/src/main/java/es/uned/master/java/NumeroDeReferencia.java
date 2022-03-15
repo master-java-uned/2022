@@ -8,9 +8,12 @@ public class NumeroDeReferencia {
     private static short ultimoAño;
     private static Map<Categoria, Integer> ultimaSecuencia;
 
-        public static short getUltimoAño(){
+
+        public static short getUltimoAño() {
+
             return ultimoAño;
         }
+
         public static void reset(short año){
             if ((año >1000) && (año<9999)) {
                 ultimoAño = año;
@@ -22,6 +25,7 @@ public class NumeroDeReferencia {
                 throw new SuministrosException("El año debe tener 4 digitos");
             }
         }
+
         public static void nextSecuencia(Categoria c) throws SuministrosException{
                 int i = ultimaSecuencia.get(c).intValue();
                 i++;
