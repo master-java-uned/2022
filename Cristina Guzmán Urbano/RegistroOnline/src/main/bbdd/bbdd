@@ -1,0 +1,8 @@
+CREATE SCHEMA `LoginOnline` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+CREATE TABLE `LoginOnline`.`usuarios` (
+  `name` VARCHAR(100) NOT NULL,
+  `surname` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(50) NOT NULL,
+  PRIMARY KEY  (`email`)
+) DEFAULT CHARSET=utf8 ;
