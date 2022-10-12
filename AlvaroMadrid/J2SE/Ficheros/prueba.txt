@@ -1,0 +1,3 @@
+Categoria1 OBRA: 15 - 75
+Categoria2 LIMPIEZA: 10 - 50
+Categoria3 PINTURA: 12 - 100
