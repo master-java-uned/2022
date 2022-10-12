@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+	<meta charset="UTF-8">
+	<title>Trivial Game</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container-fluid ">
+	
+	<div class="row align-items-center justify-content-center">
+		<div class="col-6">
+			  <div class="card" style="border: 1px solid #e5eefe">
+			 <div class="card-body">
+			     <img th:src="@{images/header.png}" width="100%">
+			  </div> 
+			  <ul class="list-group list-group-flush">
+			    <li class="list-group-item text-center">Actual:<b th:text="${posicionActual}"/></b>  </li>
+			    <li class="list-group-item text-center">Opcion 1: Casilla <b th:text="${posicion1}"/></b>  </li>
+			    <li class="list-group-item text-center">Opcion 2: Casilla <b th:text="${posicion2}"/></b></li>
+			  </ul>
+			  <div class="card-body text-center">
+			  <b th:text="'Tu dado es:  ' + ${dado} " /></b> 
+			    <a th:href="#{llamarDado}"><img th:src="@{images/dado.gif}" width="12%"></a>
+			  </div>
+			</div>
+		</div>
+  		<div class="col-6">
+  			<img th:src="@{images/tablero.png}" width="95%">
+ 		 </div>
+	</div>
+</div>
+
+</body>
+</html>
