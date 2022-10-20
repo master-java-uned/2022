@@ -1,15 +1,32 @@
 package es.uned.master.java.services;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import es.uned.master.java.controller.Ijuego;
+import es.uned.master.java.models.ECategoria;
+import es.uned.master.java.models.Preguntas;
+import es.uned.master.java.models.PreguntasOpciones;
+import es.uned.master.java.models.Tablero;
+import es.uned.master.java.repository.PreguntasOpcionesRepository;
+import es.uned.master.java.repository.PreguntasRepository;
+import es.uned.master.java.repository.TableroRepository;
 
 
 @Service
 public class Juego implements Ijuego{
 
 	private int resultado;
-
+	
+	@Autowired
+	PreguntasRepository preguntasRepository;
+	/*@Autowired
+	PreguntasOpcionesRepository pregOpcRepository;
+	@Autowired
+	TableroRepository tableroRepository;*/
 	
 	@Override
 	public int identificarJugador(int id) {
@@ -50,8 +67,9 @@ public class Juego implements Ijuego{
 		return posicion2;
 	}
 	
-	//metodo que se llama para lanzar el dado
+	
 	public int lanzarDato() {
+		//metodo que se llama para lanzar el dado
 		resultado = (int) ((Math.random() * 6) + 1);
 		return resultado;
 	}
@@ -73,6 +91,47 @@ public class Juego implements Ijuego{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	@Override
+	public Preguntas getPregunta(ECategoria categoria) {
+
+		List<Preguntas> pregs = preguntasRepository.findAllByCategoria(categoria);
+		
+		int numPreg = (int) ((Math.random() * pregs.size()));
+
+		while (pregs.get(numPreg).isUtilizada() ) 
+			numPreg = (int) ((Math.random() * pregs.size()));
+		
+		pregs.get(numPreg).setUtilizada(true);		
+		preguntasRepository.save(pregs.get(numPreg));
+		
+		System.out.println("preg.getPregunta(): "+ pregs.get(numPreg).getPregunta());
+		return pregs.get(numPreg);
+	}
+	
+	@Override
+	public boolean checkRespuesta(List<PreguntasOpciones> opciones, String respuesta) {
+		
+		System.out.println("respuesta: "+ opciones.get(Integer.parseInt(respuesta)-1).getOpcion());
+		
+		if(opciones.get(Integer.parseInt(respuesta)-1).getCorrecta() == 1) return true;
+		
+		return false;
+	}
+	
+	/*public List<String> getOpciones(int idPregunta) {
+		
+		List<PreguntasOpciones> opciones = pregOpcRepository.findByPreguntaId(idPregunta);
+		
+		List<String> str_opciones = new ArrayList<String>();
+		
+		for (PreguntasOpciones value : opciones)
+		{
+			str_opciones.add(value.getOpcion());
+		}
+		
+		return str_opciones;
+	}*/
 
 
 

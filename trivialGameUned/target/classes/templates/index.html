@@ -24,6 +24,36 @@
 			  <b th:text="'Tu dado es:  ' + ${dado} " /></b> 
 			    <a th:href="#{llamarDado}"><img th:src="@{images/dado.gif}" width="12%"></a>
 			  </div>
+			  <hr>
+			  <div class="card-body" th:if="${mensaje == null}">
+			  	<form method="post" th:action="@{/index}">
+			        <div class="form-group">
+			            <label><b th:text="${pregunta}"/></b></label>
+			            <div class="form-group">
+				            <div class="custom-control custom-radio custom-control-inline">
+				                <input type="radio" id="option1" name="respuesta" class="custom-control-input" value="1" th:value="1">
+				                <label class="custom-control-label" for="option1"><span th:text="${opcion1}"></span></label>
+				            </div>
+				            <div class="custom-control custom-radio custom-control-inline">
+				                <input type="radio" id="option2" name="respuesta" class="custom-control-input" value="2" th:value="2">
+				                <label class="custom-control-label" for="option2"><span th:text="${opcion2}"></span></label>
+				            </div>
+				            <div class="custom-control custom-radio custom-control-inline">
+				                <input type="radio" id="option3" name="respuesta" class="custom-control-input" value="3" th:value="3">
+				                <label class="custom-control-label" for="option3"><span th:text="${opcion3}"></span></label>
+				            </div>
+				            <div class="custom-control custom-radio custom-control-inline">
+				                <input type="radio" id="option4" name="respuesta" class="custom-control-input" value="4" th:value="4">
+				                <label class="custom-control-label" for="option4"><span th:text="${opcion4}"></span></label>
+				            </div>
+				        </div>
+			        </div>
+			  		<br><button class="btn btn-primary" type="submit">Enviar respuesta</button>
+    			</form>
+			  </div>
+			  <div class="card-body" th:unless="${mensaje == null}">
+			  	<b th:text="${mensaje}" /></b><br><br>
+			  </div>
 			</div>
 		</div>
   		<div class="col-6">
