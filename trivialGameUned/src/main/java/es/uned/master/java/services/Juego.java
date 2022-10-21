@@ -98,9 +98,16 @@ public class Juego implements Ijuego{
 		List<Preguntas> pregs = preguntasRepository.findAllByCategoria(categoria);
 		
 		int numPreg = (int) ((Math.random() * pregs.size()));
-
-		while (pregs.get(numPreg).isUtilizada() ) 
+		
+		int control = 0;
+		
+		while (pregs.get(numPreg).isUtilizada() && (control < pregs.size())) {
 			numPreg = (int) ((Math.random() * pregs.size()));
+			System.out.println("CONTROL: "+ control);
+			control++;
+		}
+			
+		if(control >= pregs.size()) return null;
 		
 		pregs.get(numPreg).setUtilizada(true);		
 		preguntasRepository.save(pregs.get(numPreg));

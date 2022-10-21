@@ -70,13 +70,15 @@ public class Controlador {
 		
 		if(tab.getCategoria()!=ECategoria.DADO) {
 			pregunta = service.getPregunta(tab.getCategoria());
-			model.addAttribute("pregunta",pregunta.getPregunta());
-			
-			opciones = pregOpcRepository.findByPreguntaId(pregunta.getId());
-			model.addAttribute("opcion1",opciones.get(0).getOpcion());
-			model.addAttribute("opcion2",opciones.get(1).getOpcion());
-			model.addAttribute("opcion3",opciones.get(2).getOpcion());
-			model.addAttribute("opcion4",opciones.get(3).getOpcion());
+			if(pregunta != null) {
+				model.addAttribute("pregunta",pregunta.getPregunta());
+				
+				opciones = pregOpcRepository.findByPreguntaId(pregunta.getId());
+				model.addAttribute("opcion1",opciones.get(0).getOpcion());
+				model.addAttribute("opcion2",opciones.get(1).getOpcion());
+				model.addAttribute("opcion3",opciones.get(2).getOpcion());
+				model.addAttribute("opcion4",opciones.get(3).getOpcion());
+			} else model.addAttribute("mensaje","NO HAY MAS PREGUNTAS DISPONIBLES DE ESTA TEMATICA");
 		} else model.addAttribute("mensaje","TIRA DE NUEVO");
 			
 		
