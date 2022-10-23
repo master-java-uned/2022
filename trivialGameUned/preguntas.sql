@@ -42,4 +42,24 @@ INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (38,3,'¿Cómo se l
 INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (39,3,'¿Cómo se llama la tercera parte de “El señor de los anillos”?');
 INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (40,3,'¿Cómo se llama la primera parte de “El señor de los anillos”?');
 
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (41,4,'¿En qué año se estrenó la primera película de Iron Man, que lanzó el Marvel Cinematic Universe?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (42,4,'¿Cómo se llama el martillo de Thor?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (43,4,'En The Incredible Hulk, ¿qué le dice Tony a Thaddeus Ross al final de la película?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (44,4,'¿De qué está hecho el escudo del Capitán América?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (45,4,'Los Flerkens son una raza de alienígenas extremadamente peligrosos que se parece a qué.');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (46,4,'Antes de convertirse en Visión, ¿cómo se llama el mayordomo de inteligencia artificial de Iron Man?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (47,4,'¿Cuál es el verdadero nombre de la Pantera Negra?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (48,4,'¿Cuál es la raza alienígena que Loki envía para invadir la Tierra en The Avengers?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (49,4,'¿Quién fue el último titular de la Piedra espacial antes de que Thanos lo reclame por su Infinity Gauntlet?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (50,4,'¿Qué nombre falso usa Natasha cuando conoce a Tony por primera vez?');
 
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (51,5,'¿En qué año se estableció Disney?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (52,5,'¿Cuántos resorts de Disney hay en el mundo?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (53,5,'¿Dónde se encuentra Walt Disney Studios?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (54,5,'¿Cuántas princesas de Disney hay?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (55,5,'¿Cuál es la primera película de Disney que se estrena?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (56,5,'¿Quién es el némesis de Mickey Mouse?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (57,5,'En la película Aladdin, ¿cómo se llama el loro?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (58,5,'En Atlantis: The Lost Empire, ¿cuál es el nombre de los personajes principales?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (59,5,'¿Cuáles son los nombres de las hermanastras de Cenicienta?');
+INSERT INTO `preguntas` (`id`,`categoria`,`pregunta`) VALUES (60,5,'¿Para qué pensaba Ariel que era un tenedor?');
