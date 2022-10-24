@@ -15,6 +15,6 @@ public interface Ijuego {
 	public int  leerCasilla(int casilla, int categoria);
 	public int  pregunta(int idPregunta,String Pregunta,String opcion1,String opcion2,String opcion3,String opcion4, String Correcta);
 	public Preguntas getPregunta(ECategoria categoria);
-	public boolean checkRespuesta(List<PreguntasOpciones> opciones, String respuesta);
+	public boolean checkRespuesta(List<PreguntasOpciones> opciones, int respuesta);
 	//public List<String> getOpciones(int idPregunta);
 }

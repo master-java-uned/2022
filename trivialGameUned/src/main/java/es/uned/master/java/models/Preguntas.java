@@ -11,7 +11,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
-import org.springframework.beans.factory.annotation.Value;
 
 @Entity
 @Table(name = "preguntas")

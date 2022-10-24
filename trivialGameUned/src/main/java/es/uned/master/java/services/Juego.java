@@ -117,15 +117,26 @@ public class Juego implements Ijuego{
 	}
 	
 	@Override
-	public boolean checkRespuesta(List<PreguntasOpciones> opciones, String respuesta) {
+	public boolean checkRespuesta(List<PreguntasOpciones> opciones, int respuesta) {
 		
-		System.out.println("respuesta: "+ opciones.get(Integer.parseInt(respuesta)-1).getOpcion());
+		System.out.println("respuesta: "+ opciones.get(respuesta-1).getOpcion());
 		
-		if(opciones.get(Integer.parseInt(respuesta)-1).getCorrecta() == 1) return true;
+		if(opciones.get(respuesta-1).getCorrecta() == 1) return true;
 		
 		return false;
 	}
-	
+	/*
+	 * public boolean checkRespuesta(List<PreguntasOpciones> opciones, String
+	 * respuesta) {
+	 * 
+	 * System.out.println("respuesta: "+
+	 * opciones.get(Integer.parseInt(respuesta)-1).getOpcion());
+	 * 
+	 * if(opciones.get(Integer.parseInt(respuesta)-1).getCorrecta() == 1) return
+	 * true;
+	 * 
+	 * return false; }
+	 */
 	/*public List<String> getOpciones(int idPregunta) {
 		
 		List<PreguntasOpciones> opciones = pregOpcRepository.findByPreguntaId(idPregunta);

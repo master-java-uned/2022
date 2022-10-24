@@ -16,8 +16,8 @@
 				<img th:src="@{images/header.png}" width="100%">
 				<div class="card-body">
 			  		<ul class="list-group list-group-flush">
-				    <li class="list-group-item text-center">Casilla Actual:<b th:text="${posicionActual}"/></b></li>
-				    <li class="list-group-item text-center" th:unless="${posicion1 == null}" >
+				    <li class="list-group-item text-center">Actual:<b th:text="${posicionActual}"/></b></li>
+				    <li class="list-group-item text-center">
 					    <form method="post" th:action="@{/index}">
 					        <div class="form-group">
 					       			<div class="form-check form-check-inline">
@@ -28,17 +28,17 @@
 									  <input class="form-check-input" type="radio" id="posicion2" name="posicion" th:value="${posicion2}">
 									  <label class="form-check-label" for="posicion2">Mover a casilla <b th:text="${posicion2}"></b></label>
 									</div>
-					  					 <button   class="btn btn-primary" type="submit">Mover</button>
+					  				 <button class="btn btn-primary" type="submit">Mover</button>
 					  		</div>
 		    			</form>
 				   	</li>
 				  
 				   	
-			<!-- **** SECCION DEL DADO **** --> 	
-					<li class="list-group-item text-center">
+			<!-- **** SECCION DEL DADO **** --> 			
+					<li class="list-group-item text-center" th:less=${dado}>
 						    <a th:href="#{llamarDado}" > 
 							 	<span th:switch="${dado}">
-								  <img th:case="null" th:src="@{images/rand.svg}" width="8%" >
+								  <img th:case="null" th:src="@{images/rand.svg}" width="8%"  >
 					  				 <img th:case="0" th:src="@{images/rand.svg}" width="8%" >
 									 <img th:case="1" th:src="@{images/1.svg}" width="7%">
 									 <img th:case="2" th:src="@{images/2.svg}" width="7%">
@@ -51,39 +51,11 @@
 					</li> 
 					
 				</ul>
-					<!--  **** SECCION DE LAS PREGUNTAS  **** -->
-					  <div th:if="${partida>1}" class="px-5" >
-					  	<form method="post" th:action="@{/respuesta}" >
-					        <div class="form-group">
-					            <label><b th:text="${pregunta}"/></b></label>
-					            <div class="form-group">
-						            <div class="custom-control custom-radio custom-control-inline">
-						                <input type="radio" id="option1" name="respuesta" class="custom-control-input" value="1" th:value="1">
-						                <label class="custom-control-label" for="option1"><span th:text="${opcion1}"></span></label>
-						            </div>
-						            <div class="custom-control custom-radio custom-control-inline">
-						                <input type="radio" id="option2" name="respuesta" class="custom-control-input" value="2" th:value="2">
-						                <label class="custom-control-label" for="option2"><span th:text="${opcion2}"></span></label>
-						            </div>
-						            <div class="custom-control custom-radio custom-control-inline">
-						                <input type="radio" id="option3" name="respuesta" class="custom-control-input" value="3" th:value="3">
-						                <label class="custom-control-label" for="option3"><span th:text="${opcion3}"></span></label>
-						            </div>
-						            <div class="custom-control custom-radio custom-control-inline">
-						                <input type="radio" id="option4" name="respuesta" class="custom-control-input" value="4" th:value="4">
-						                <label class="custom-control-label" for="option4"><span th:text="${opcion4}"></span></label>
-						            </div>
-						        </div>
-					        </div>
-					  		<button class="btn btn-primary" type="submit" >Enviar respuesta</button>
-		    			  </form>
-		    			 </div>
-					 
-				</div>
+		</div>	
 		  
 		<!-- **** SECCION DE MENSAJES **** -->
 		 <div class="card-footer border border-danger text-center" th:unless="${mensaje == null}" >
-			  	<h4  th:text="${mensaje}" /></h4>		
+			  	<h4  th:text="${mensaje}" /></h4>
 		</div> 
 		
 		</div>
