@@ -2,26 +2,16 @@ package es.uned.master.java.models;
 
 public class Casilla {
 
-	   private int numero;
+	private int nCasilla;
 
-	   
-	   
-	public Casilla() {
 	
+	public int getnCasilla() {
+		return nCasilla;
 	}
 
-	public Casilla(int numero) {
-		super();
-		this.numero = numero;
+	public void setnCasilla(int nCasilla) {
+		this.nCasilla = nCasilla;
 	}
-
-	public int getNumero() {
-		return numero;
-	}
-
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-	   
-
+	
+	
 }
