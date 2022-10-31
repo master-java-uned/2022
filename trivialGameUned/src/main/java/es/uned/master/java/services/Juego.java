@@ -2,11 +2,12 @@ package es.uned.master.java.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import es.uned.master.java.controller.Ijuego;
+import es.uned.master.java.interfaces.Ijuego;
 import es.uned.master.java.models.ECategoria;
 import es.uned.master.java.models.Preguntas;
 import es.uned.master.java.models.PreguntasOpciones;
@@ -18,15 +19,13 @@ import es.uned.master.java.repository.TableroRepository;
 
 @Service
 public class Juego implements Ijuego{
+	
 
 	private int resultado;
 	
 	@Autowired
 	PreguntasRepository preguntasRepository;
-	/*@Autowired
-	PreguntasOpcionesRepository pregOpcRepository;
-	@Autowired
-	TableroRepository tableroRepository;*/
+
 	
 	@Override
 	public int identificarJugador(int id) {
@@ -125,31 +124,7 @@ public class Juego implements Ijuego{
 		
 		return false;
 	}
-	/*
-	 * public boolean checkRespuesta(List<PreguntasOpciones> opciones, String
-	 * respuesta) {
-	 * 
-	 * System.out.println("respuesta: "+
-	 * opciones.get(Integer.parseInt(respuesta)-1).getOpcion());
-	 * 
-	 * if(opciones.get(Integer.parseInt(respuesta)-1).getCorrecta() == 1) return
-	 * true;
-	 * 
-	 * return false; }
-	 */
-	/*public List<String> getOpciones(int idPregunta) {
-		
-		List<PreguntasOpciones> opciones = pregOpcRepository.findByPreguntaId(idPregunta);
-		
-		List<String> str_opciones = new ArrayList<String>();
-		
-		for (PreguntasOpciones value : opciones)
-		{
-			str_opciones.add(value.getOpcion());
-		}
-		
-		return str_opciones;
-	}*/
+
 
 
 

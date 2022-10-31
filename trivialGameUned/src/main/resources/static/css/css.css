@@ -1,9 +1,79 @@
 .oculto{
 	display:none;
 }
-.tablero{
-	background-image: url('../images/tablero.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+
+
+.ficha1,.ficha2 {
+  border: 0px;
+  border-radius:50px;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
 }
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: red;}
+  100% {background-color: yellow;}
+}
+
+.ficha1 {
+ position:absolute;
+ top: 150px;
+ left: 75%;
+ right: 20%;
+  	
+}
+
+.h-custom {
+			height: calc(100% - 73px);
+			}
+			
+.footer {
+  background-color: #00003A;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  color: white;
+
+}
+.fondo{
+	background-color:#E5EEFE;
+}
+.btn-primary{
+	background-color: #00003A !important;
+}
+	.divider:after,
+			.divider:before {
+			content: "";
+			flex: 1;
+			height: 1px;
+			background: #eee;
+			}
+			.h-custom {
+			height: calc(100% - 73px);
+			}
+			@media (max-width: 450px) {
+			.h-custom {
+			height: 100%;
+			}
+			}
+			
+		@keyframes rotate {from {transform: rotate(0deg);}
+			    to {transform: rotate(360deg);}}
+			@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+			  to {-webkit-transform: rotate(360deg);}}
+			#tablero,#tablero2{
+			    -webkit-animation: 3s rotate linear infinite;
+			    animation: 3s rotate linear infinite;
+			    -webkit-transform-origin: 50% 50%;
+			    transform-origin: 50% 50%;
+			}
+			#tablero,#tablero2{
+			position:relative;left:50px;top:20px;
+			width:25%;
+			}

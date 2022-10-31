@@ -9,24 +9,41 @@
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	
 </head>
-<body >
- <div class="container-fluid ">
- 	<div class="row">
-		<div class="col-6">
-			<div class="card " style="border: 1px solid #fff;" >
-				<img th:src="@{images/header.png}" width="100%">
-			</div>
-		</div>
-		<div class="col-6">
+<body class="fondo">
+<div class="container-fluid ">
+	<!-- *** SECCION IZQUIERDA*** -->
+	<div class="row fondo">
+		<div class="col-6 ">
+			<div class="card" style="border: 1px solid #fff;" >
+				<div class="fondo text-center">
+					<img th:src="@{images/header.png}" width="40%">
+				</div>
+ 
+ 
+ 			</div>
+ 		</div>
+ 		<div class="col-6 ">
+ 		
+ 		<div>
+	  		<img th:src="${avatar}" width="10%"> <span th:text="${nombre}"></span>
+	  		<table>
+	  			<tr>
+	  				<td></td>
+	  				<td></td>
+	  				<td></td>
+	  				<td></td>
+	  				<td></td>
+	  				<td></td>
+	  		
+	  			<tr>
+	  		
+	  		</table>
+	  	
+	  	</div>
 	  			<img th:src="@{images/tablero.png}" class="img-fluid my-auto" width="85%">
 	 	</div>
-	 	<!-- *** FIN DE CONTAINER*** -->
-	</div>
- 
- </div>
- 
- 
- 
+	 </div>
+ 	</div>
  
  
         <!-- Modal -->

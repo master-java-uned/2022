@@ -6,18 +6,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
+
+import es.uned.master.java.interfaces.Ijuego;
 import es.uned.master.java.models.Casilla;
 import es.uned.master.java.models.ECategoria;
+import es.uned.master.java.models.Jugadores;
 import es.uned.master.java.models.Preguntas;
 import es.uned.master.java.models.PreguntasOpciones;
 import es.uned.master.java.models.Tablero;
@@ -51,6 +49,9 @@ public class Controlador {
 	@RequestMapping("/index")
 	public void partida (Model model) {
 		//muestra la posicion  Actual
+		
+		
+		
 		if (nuevoJuego) {
 		posicionActual=1;
 		dado=0;
@@ -61,7 +62,10 @@ public class Controlador {
 		model.addAttribute("mensaje","LANZA EL DADO PARA JUGAR COMENZAR EL JUEGO");
 		nuevoJuego=false;
 		}else {
-	
+	    
+	    
+	    
+	   
 			
 		//llamamos al dado
 		dado=llamarDado(model);	
@@ -118,40 +122,12 @@ public class Controlador {
 }
 
 	
-	
   public int llamarDado (Model model) {
    int leerDado=service.lanzarDato();
   return leerDado; }
  
 	
-  
-/*
- * @RequestMapping("/preguntas") public void hacerPreguntas(Model model) { if
- * (partida>=1) { //busca en la bbdd la posicion actual para realizar la
- * pregunta Tablero tab = tableroRepository.findByCasilla(posicionActual);
- * 
- * System.out.println("categoria: "+ tab.getCategoria()); //se incluye condicion
- * temporal para categoria Marvel y Disney
- * if(tab.getCategoria()!=ECategoria.DADO) { try { pregunta =
- * service.getPregunta(tab.getCategoria()); if(pregunta != null) { partida++;
- * 
- * model.addAttribute("partida",partida);
- * model.addAttribute("pregunta",pregunta.getPregunta());
- * 
- * opciones = pregOpcRepository.findByPreguntaId(pregunta.getId());
- * model.addAttribute("opcion1",opciones.get(0).getOpcion());
- * model.addAttribute("opcion2",opciones.get(1).getOpcion());
- * model.addAttribute("opcion3",opciones.get(2).getOpcion());
- * model.addAttribute("opcion4",opciones.get(3).getOpcion()); } }
- * catch(Exception e) {
- * 
- * model.addAttribute(
- * "mensaje","NO HAY MAS PREGUNTAS DISPONIBLES DE ESTA TEMATICA"); } } else
- * model.addAttribute("mensaje","TIRA DE NUEVO"); }
- * 
- * }
- * 
- */ 
+
   @RequestMapping("/respuesta")
 	public void getResponse (Model model, int respuesta) {
 		System.out.print("**********");
@@ -163,5 +139,5 @@ public class Controlador {
 		else model.addAttribute("mensaje","RESPUESTA INCORRECTA");
 		
 	}
-
+ 
 }
