@@ -45,7 +45,7 @@ public class UserController {
 		public String save(@Validated Jugadores jugador, Model model) {
 			services.save(jugador);
 			
-			return "redirect:/index/";
+			return "redirect:/index";
 			//+"?"+jugador.getNombre();
 			
 			

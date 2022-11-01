@@ -1,5 +1,6 @@
 package es.uned.master.java.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -19,6 +20,8 @@ public class Tablero {
 	public Tablero() {};
 	@Enumerated(EnumType.ORDINAL)
 	private ECategoria categoria;
+	private boolean quesito;
+	
 	public int getCasilla() {
 		return casilla;
 	}
@@ -30,6 +33,12 @@ public class Tablero {
 	}
 	public void setCategoria(ECategoria categoria) {
 		this.categoria = categoria;
+	}
+	public boolean isQuesito() {
+		return quesito;
+	}
+	public void setQuesito(boolean quesito) {
+		this.quesito = quesito;
 	}
 	
 }

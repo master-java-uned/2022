@@ -1,8 +1,6 @@
 package es.uned.master.java.services;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,10 +9,7 @@ import es.uned.master.java.interfaces.Ijuego;
 import es.uned.master.java.models.ECategoria;
 import es.uned.master.java.models.Preguntas;
 import es.uned.master.java.models.PreguntasOpciones;
-import es.uned.master.java.models.Tablero;
-import es.uned.master.java.repository.PreguntasOpcionesRepository;
 import es.uned.master.java.repository.PreguntasRepository;
-import es.uned.master.java.repository.TableroRepository;
 
 
 @Service
@@ -82,13 +77,6 @@ public class Juego implements Ijuego{
 		
 		// TODO Auto-generated method stub
 		return casillaAnterior;
-	}
-
-	@Override
-	public int pregunta(int idPregunta, String Pregunta, String opcion1, String opcion2, String opcion3, String opcion4,
-			String Correcta) {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 	
 	@Override

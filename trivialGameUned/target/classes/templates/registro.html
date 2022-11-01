@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Trivial Game</title>
+ <link rel="stylesheet" type="text/css" href="css/css.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body class="fondo">
+<section class="vh-100">
+  <div class="container-fluid h-custom" >
+	  <div class="row d-flex justify-content-center align-items-center text-center">
+	      <div class="col-md-12 col-lg-12 col-xl-12">
+	         <img th:src="@{images/header.png}"
+	          class="img-fluid" alt="trivial" width="25%">
+	      </div>
+	
+		</div>
+  <form th:action="@{/save}" th:object=${jugador} method="POST">
+   <div class="row d-flex justify-content-center align-items-center mx-5 mt-3">
+ 
+      <div class="col-md-col-lg-6 col-xl-5"> 
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+				    	<input th:field="*{id}" type="text" class="form-control" hidden=""/>
+			    
+                  
+                    <div class="form-outline mb-4"> 
+	                    <input type="text" id="nombre" th:field="*{nombre}" class="form-control" placeholder="Tu Nombre o Nickname" />
+                     
+                    </div>
+              
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+               	 
+                  <input type="email" id="email" th:field="*{email}" class="form-control" placeholder="Tu email"/>
+                  
+                </div>
+
+                
+        
+      </div>
+      <div class="col-md-col-lg-6 col-xl-5">
+       
+                <!-- Checkbox -->
+               <div class="form-outline mb-4">
+ 					<p>Selecciona tu  Avatar</p>
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar1"  th:value="Users2_1.svg"  > 
+ 					<img th:src="@{images/SVG/Users2_1.svg}" width="10%" onclick="document.getElementById('avatar1').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar2"  th:value="2"  > 
+ 					<img th:src="@{images/SVG/Users2_2.svg}" width="10%" onclick="document.getElementById('avatar2').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar3"  th:value="3"  > 
+ 					<img th:src="@{images/SVG/Users2_3.svg}" width="10%" onclick="document.getElementById('avatar3').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar4"  th:value="4"  > 
+ 					<img th:src="@{images/SVG/Users2_4.svg}" width="10%" onclick="document.getElementById('avatar4').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar5"  th:value="5"  > 
+ 					<img th:src="@{images/SVG/Users2_5.svg}" width="10%" onclick="document.getElementById('avatar5').checked = true" />
+ 			
+ 					<input type="radio" th:field="*{avatar}" id="avatar6"  th:value="6"  > 
+ 					<img th:src="@{images/SVG/Users2_6.svg}" width="10%" onclick="document.getElementById('avatar6').checked = true" />
+ 					<br>
+ 					<input type="radio" th:field="*{avatar}" id="avatar7"  th:value="7"  > 
+ 					<img th:src="@{images/SVG/Users2_7.svg}" width="10%" onclick="document.getElementById('avatar7').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar8"  th:value="8"  > 
+ 					<img th:src="@{images/SVG/Users2_8.svg}" width="10%" onclick="document.getElementById('avatar8').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar9"  th:value="9"  > 
+ 					<img th:src="@{images/SVG/Users2_9.svg}" width="10%" onclick="document.getElementById('avatar9').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar10"  th:value="10"  > 
+ 					<img th:src="@{images/SVG/Users2_10.svg}" width="10%" onclick="document.getElementById('avatar10').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar11"  th:value="11"  > 
+ 					<img th:src="@{images/SVG/Users2_11.svg}" width="10%" onclick="document.getElementById('avatar11').checked = true" />
+ 				
+ 					<input type="radio" th:field="*{avatar}" id="avatar12"  th:value="12"  > 
+ 					<img th:src="@{images/SVG/Users2_12.svg}" width="10%" onclick="document.getElementById('avatar12').checked = true" />
+ 						<br>
+ 					<input type="radio" th:field="*{avatar}" id="avatar13"  th:value="13"  > 
+ 					<img th:src="@{images/SVG/Users2_13.svg}" width="10%" onclick="document.getElementById('avatar13').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar14"  th:value="14"  > 
+ 					<img th:src="@{images/SVG/Users2_14.svg}" width="10%" onclick="document.getElementById('avatar14').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar15"  th:value="15"  > 
+ 					<img th:src="@{images/SVG/Users2_15.svg}" width="10%" onclick="document.getElementById('avatar15').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar16"  th:value="16"  > 
+ 					<img th:src="@{images/SVG/Users2_16.svg}" width="10%" onclick="document.getElementById('avatar16').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar17"  th:value="17"  > 
+ 					<img th:src="@{images/SVG/Users2_17.svg}" width="10%" onclick="document.getElementById('avatar17').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar16"  th:value="18"  > 
+ 					<img th:src="@{images/SVG/Users2_18.svg}" width="10%" onclick="document.getElementById('avatar18').checked = true" />
+               	<br>
+ 					<input type="radio" th:field="*{avatar}" id="avatar19"  th:value="19"  > 
+ 					<img th:src="@{images/SVG/Users2_19.svg}" width="10%" onclick="document.getElementById('avatar19').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar20"  th:value="20"  > 
+ 					<img th:src="@{images/SVG/Users2_20.svg}" width="10%" onclick="document.getElementById('avatar20').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar21"  th:value="21"  > 
+ 					<img th:src="@{images/SVG/Users2_21.svg}" width="10%" onclick="document.getElementById('avatar21').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar22"  th:value="22"  > 
+ 					<img th:src="@{images/SVG/Users2_22.svg}" width="10%" onclick="document.getElementById('avatar22').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar23"  th:value="23"  > 
+ 					<img th:src="@{images/SVG/Users2_23.svg}" width="10%" onclick="document.getElementById('avatar23').checked = true" />
+ 					
+ 					<input type="radio" th:field="*{avatar}" id="avatar24"  th:value="24"  > 
+ 					<img th:src="@{images/SVG/Users2_24.svg}" width="10%" onclick="document.getElementById('avatar24').checked = true" />
+                              
+                </div>
+
+                <!-- Submit button -->
+            
+     </div>
+      </div>
+    
+     
+  <div class="row text-center footer justify-content-center align-items-center" >
+		<div class="col-12">
+		
+		<button type="submit" class="btn text-white"><h1> Comenzar a Jugar</h1></button>
+		
+		</div>
+		</div>
+		 </form>
+  </div>
+</section>
+
+</body>
+</html>

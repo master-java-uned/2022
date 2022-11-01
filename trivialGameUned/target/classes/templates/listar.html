@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container mt-4">
+<h2>Registro del Jugador</h2>
+<table class="table" style="width:60%;margin:auto">
+	<thead>
+	
+			<tr>
+				<th>Avatar</th>
+				<th>Nombre</th>
+				<th>Email</th>
+				<th>QuesitoAmarillo</th>
+				<th>QuesitoAzul</th>
+				<th>QuesitoMorado</th>
+				<th>QuesitoNaranja</th>
+				<th>QuesitoRosa</th>
+				<th>QuesitoVerde</th>				
+			</tr>
+			</thead>
+		  	<tbody>
+			<tr th:each="jugador:${jugador}">
+				<td><img th:src="${jugador.avatar}" width="70%"> </td>
+				<td th:text="${jugador.nombre}"></td>
+				<td th:text="${jugador.email}"></td>
+			 	<td th:text="${jugador.quesito_amarillo}"></td>
+				 <td th:text="${jugador.quesito_azul}"></td>
+				 <td th:text="${jugador.quesito_morado}"></td>
+				 <td th:text="${jugador.quesito_naranja}"></td>
+				 <td th:text="${jugador.quesito_rosa}"></td>
+				 <td th:text="${jugador.quesito_verde}"></td>
+			</tr>
+		</tbody>
+	
+
+</table>
+</div>
+</body>
+</html>
