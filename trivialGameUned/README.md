@@ -9,12 +9,10 @@ Se compone de tres interfaces ('Ijuego', 'IJugadores', 'IjugadoresServices') que
 
 ## Models
 Contiene los diferentes POJO utilizados en el proyecto:
-* Casilla
 * ECategoria (clase Enum)
 * Jugadores
 * Preguntas
 * PreguntasOpciones
-* Puntuacion
 * Tablero
 
 ## Repository
