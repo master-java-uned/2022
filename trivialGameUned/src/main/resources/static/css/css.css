@@ -40,6 +40,8 @@
 }
 
 
+
+
 .ficha1,.ficha2 {
   border: 0px;
   border-radius:50px;
@@ -64,6 +66,7 @@
  right: 20%;
   	
 }
+
 
 .h-custom {
 			height: calc(100% - 73px);
@@ -105,12 +108,17 @@
 			@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
 			  to {-webkit-transform: rotate(360deg);}}
 			#tablero,#tablero2{
-			    -webkit-animation: 3s rotate linear infinite;
-			    animation: 3s rotate linear infinite;
+			    -webkit-animation: 7s rotate linear infinite;
+			    animation: 7s rotate linear infinite;
 			    -webkit-transform-origin: 50% 50%;
 			    transform-origin: 50% 50%;
 			}
 			#tablero,#tablero2{
-			position:relative;left:50px;top:20px;
-			width:25%;
+			position:relative;left:350px;top:20px;
+			width:45%;
+			}
+			#error{
+			position:absolute;left:350px;top:300px;
+			width:45%;
+			z-index:1;
 			}
