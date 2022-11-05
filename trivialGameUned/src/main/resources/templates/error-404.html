@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+	<meta charset="UTF-8">
+	<title>Trivial Game</title>
+	 <link rel="stylesheet" type="text/css" href="css/css.css">
+	 <link rel="icon" href="images/trivial-favicon.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body class="fondo">
+<div class="container-fluid h-custom" >
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-12 ">
+         <img th:src="@{images/tablero-sin-fondo.png}" alt="imagen del trivial" id="tablero" width="150%">
+     </div>
+     <div class="col-12 text-center" id="error">
+      <h1><span style="color:#00003A" >UPS .... ERROR </span>
+       <span style="color:#429CE2">4</span> <span style="color:#FFE50E">0</span><span style="color:#FF3E8A">4</span></h1>
+      <h3>Página no Encontrada</h3>
+      </div>
+
+	</div>
+
+
+		<div class="row text-center footer justify-content-center align-items-center" >
+		<div class="col-12">
+		
+		<a  th:href="@{/trivial}"  class="btn text-white"> <h1>Ir al Inicio</h1></a>
+		
+		</div>
+		</div>
+</div>
+
+
+</body>
+</html>
