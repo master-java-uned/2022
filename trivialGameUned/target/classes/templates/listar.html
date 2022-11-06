@@ -2,44 +2,57 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>Trivial Game</title>
+	 <link rel="stylesheet" type="text/css" href="css/css.css">
+	 <link rel="icon" href="images/trivial-favicon.png">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </head>
-<body>
-<div class="container mt-4">
-<h2>Registro del Jugador</h2>
-<table class="table" style="width:60%;margin:auto">
+<body class="fondo">
+<div class="container mt-4 ">
+<h2 class="text-center">Registro de los Jugadores</h2>
+<table class="table" style="width:80%;margin:auto">
 	<thead>
 	
 			<tr>
 				<th>Avatar</th>
 				<th>Nombre</th>
 				<th>Email</th>
-				<th>QuesitoAmarillo</th>
-				<th>QuesitoAzul</th>
-				<th>QuesitoMorado</th>
-				<th>QuesitoNaranja</th>
-				<th>QuesitoRosa</th>
-				<th>QuesitoVerde</th>				
+				<th width="10%"><img th:src="@{images/marvel.png}" width="150%" style="margin-top:15px"></th>
+				<th width="10%"><img th:src="@{images/harry.png}" width="150%" style="margin-top:15px"></th>
+				<th width="10%"><img th:src="@{images/star.png}" width="150%" style="margin-top:15px"></th>
+				<th width="10%"><img th:src="@{images/cronicas.png}" width="150%" style="margin-top:15px"></th>
+				<th width="10%"><img th:src="@{images/disney.png}" width="150%" style="margin-top:15px"></th>
+				<th width="10%"><img th:src="@{images/anillos.png}" width="150%" style="margin-top:15px"></th>
+			
 			</tr>
 			</thead>
 		  	<tbody>
 			<tr th:each="jugador:${jugador}">
-				<td><img th:src="${jugador.avatar}" width="70%"> </td>
+				<td><img th:src="${jugador.avatar}" width="40%"> </td>
 				<td th:text="${jugador.nombre}"></td>
 				<td th:text="${jugador.email}"></td>
-			 	<td th:text="${jugador.quesito_amarillo}"></td>
-				 <td th:text="${jugador.quesito_azul}"></td>
-				 <td th:text="${jugador.quesito_morado}"></td>
-				 <td th:text="${jugador.quesito_naranja}"></td>
-				 <td th:text="${jugador.quesito_rosa}"></td>
-				 <td th:text="${jugador.quesito_verde}"></td>
+				<td class="text-center"><img th:if="${jugador.quesito_amarillo==true}" th:src="@{images/quesito_amarillo.png}" width="15%" ></td>
+				<td class="text-center"><img th:if="${jugador.quesito_morado==true}" th:src="@{images/quesito_morado.png}" width="15%" class=""></td>
+			 	<td class="text-center"><img th:if="${jugador.quesito_verde==true}" th:src="@{images/quesito_verde.png}" width="15%" class=""></td>
+				<td class="text-center"><img th:if="${jugador.quesito_azul==true}" th:src="@{images/quesito_azul.png}" width="15%" class=""></td>
+				<td class="text-center"><img th:if="${jugador.quesito_rosa==true}" th:src="@{images/quesito_rosa.png}" width="15%" class=""></td>
+				<td class="text-center"><img th:if="${jugador.quesito_naranja==true}" th:src="@{images/quesito_naranja.png}" width="15%" class=""></td>
 			</tr>
 		</tbody>
-	
-
 </table>
 </div>
+<div class="row text-center footer justify-content-center align-items-center" >
+		<div class="col-6">
+		
+		<a  th:href="@{/trivial}"  class="btn text-white"> <h1>Inicio</h1></a>
+		
+		</div>
+		<div class="col-6">
+		
+		<a  th:href="@{/index}"  class="btn text-white"> <h1>Seguir Jugando</h1></a>
+		
+		</div>
+		</div>
 </body>
 </html>

@@ -109,13 +109,11 @@
 	</div>
 		<!--	****TABLERO **** -->
 	  	<div class="col-6">
-	  	<div>
-	  		<img th:src="${avatar}" width="10%"> <span th:text="${nombre}"></span>
-	  		<a th:href="@{/listar}" class="btn btn-primary text-end">Jugadores</a>
-	  	</div>
-	  	<div class="ficha1">
-	  	</div>
-	  			<img th:src="@{images/tablero.png}" class="img-fluid my-auto" width="85%">
+		  	<div>
+		  		<img th:src="${avatar}" width="10%"> <span th:text="${nombre}"></span>
+		  		<a th:href="@{/listar}" class="btn btn-primary text-end">Jugadores</a>
+		  	</div>
+	  		<img th:src="@{images/tablero.png}" class="img-fluid my-auto" width="85%">
 	 	</div>
 	 	<!-- *** FIN DE CONTAINER*** -->
 		</div>

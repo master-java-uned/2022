@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import es.uned.master.java.interfaces.Ijuego;
 import es.uned.master.java.interfaces.IjugadoresServices;
-import es.uned.master.java.models.Casilla;
 import es.uned.master.java.models.ECategoria;
 import es.uned.master.java.models.Jugadores;
 import es.uned.master.java.models.Preguntas;
@@ -37,7 +36,6 @@ public class Controlador {
 	private int posicionActual=0;
 	Preguntas pregunta;
 	List<PreguntasOpciones> opciones;
-	Casilla nuevaCasilla;
 	Boolean nuevoJuego=true;
 	int dado;
 	@Autowired
