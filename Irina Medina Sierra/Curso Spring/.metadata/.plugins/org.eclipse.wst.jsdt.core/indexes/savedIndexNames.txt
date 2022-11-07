@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/irina/Desktop/Curso Spring/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1342106057.index
+2237517940.index
+2023996725.index
+3941518993.index
+93203545.index
+1462108476.index

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+	<meta charset="UTF-8">
+	<title>Trivial Game</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container-fluid ">
+	
+	<div class="row align-items-center justify-content-center">
+		<div class="col-6">
+			<div class="card ">
+			  <div class="card-body">
+			    <h1 class="text-center">Hola Trivialiano</h1>
+			    <p class="card-text text-center">Bienvenido al divertido Juego del Trivial</p>
+			  </div>
+			  <ul class="list-group list-group-flush">
+			    <li class="list-group-item text-center">	<b th:text="'Tu dado es:  ' + ${dado} " /></b> </li>
+			    <li class="list-group-item text-center">Actual:</li>
+			    <li class="list-group-item text-center">Opcion 1: Casilla</li>
+			    <li class="list-group-item text-center">Opcion 2: Casilla</li>
+			  </ul>
+			  <div class="card-body text-center">
+			    <a href="#" class="card-link"><img th:src="@{images/dado.gif}" width="75%"></a>
+			  </div>
+			   <div class="card-footer text-center">
+			    <img th:src="@{images/categorias.png}" width="95%">
+			  </div>
+			</div>
+		</div>
+  		<div class="col-6">
+  			<img th:src="@{images/tablero-numero.png}" width="95%">
+ 		 </div>
+	</div>
+</div>
+
+</body>
+</html>

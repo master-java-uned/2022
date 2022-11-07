@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="true"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="/Users/irina/git/repository2/.git">
+			<item value="false"/>
+			<item value="Irina Medina Sierra &lt;94137035+irinadvallemedina@users.noreply.github.com&gt;"/>
+			<item value="cambios 12 de octubre&#x0D;&#x0D;Change-Id: I0000000000000000000000000000000000000000&#x0D;Signed-off-by: Irina Medina Sierra &lt;94137035+irinadvallemedina@users.noreply.github.com&gt;"/>
+			<item value="Irina Medina Sierra &lt;94137035+irinadvallemedina@users.noreply.github.com&gt;"/>
+			<item value="0000000000000000000000000000000000000000"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+	</section>
+</section>

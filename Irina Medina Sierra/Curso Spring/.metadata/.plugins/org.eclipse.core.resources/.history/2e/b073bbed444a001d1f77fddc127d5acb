@@ -1,0 +1,31 @@
+package es.uned.master.java.models;
+
+public class Casilla {
+	
+	private int PosicionAnterior;
+	private int PosicionNueva;
+	
+	
+	public Casilla(int posicionAnterior, int posicionNueva) {
+		PosicionAnterior = posicionAnterior;
+		PosicionNueva = posicionNueva;
+	}
+	
+	public int getPosicionAnterior() {
+		return PosicionAnterior;
+	}
+	public void setPosicionAnterior(int posicionAnterior) {
+		PosicionAnterior = posicionAnterior;
+	}
+	public int getPosicionNueva() {
+		return PosicionNueva;
+	}
+	public void setPosicionNueva(int posicionNueva) {
+		PosicionNueva = posicionNueva;
+	}
+	
+	
+	
+	
+
+}

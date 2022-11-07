@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;App.css&apos; to &apos;Store&apos;" description="Move &apos;App.css&apos; to &apos;Store&apos;" destination="Front End/triviagame/src/Store" element1="Front End/triviagame/src/App.css" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1664655954180" updateReferences="true"/>
+</session>

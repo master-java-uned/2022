@@ -1,0 +1,12 @@
+package es.uned.master.java.controller;
+
+public interface Juego {
+
+	public void identificarJugador(int id);
+	public void posicionActual(int casilla);
+	public void lanzarDato(int numeroDado);
+	public void leerCasilla(int casilla, int categoria);
+	public void pregunta(int idPregunta,String Pregunta,String opcion1,String opcion2,String opcion3,String opcion4, String Correcta);
+	
+	
+}

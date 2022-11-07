@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+  
+  <context:annotation-config/>
+  <context:component-scan base-package="com.baeldung.applicationcontext"/>
+
+<!-- Creacion de la Dependencia con constructor-->
+<bean id="miInforme" class="es.uned.master.java.IoC.Informe"></bean>
+
+
+<bean id="miEmpleado" class="es.uned.master.java.IoC.JefeEmpleado">
+	<constructor-arg ref="miInforme"></constructor-arg>
+</bean>
+<!-- Inyeccion de dependencia con setter -->
+<bean id="miSecretarioEmpleado" class="es.uned.master.java.IoC.SecretarioEmpleado">
+	<property name="informeNuevo" ref="miInforme"></property>
+	<property name="email" value="secretaria@gmail.com"></property>
+	<property name="nombreEmpresa" value="Informática Plus"></property>
+</bean>
+
+
+</beans>

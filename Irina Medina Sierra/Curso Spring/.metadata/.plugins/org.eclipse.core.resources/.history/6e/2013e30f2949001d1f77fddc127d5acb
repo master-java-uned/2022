@@ -1,0 +1,17 @@
+package es.uned.master.java.models;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="dado")
+public class Dado {
+
+	private int resultado;
+	
+	public int lanzarDado() {
+	resultado = (int) ((Math.random() * 6) + 1);
+	return resultado;
+	}
+	
+}

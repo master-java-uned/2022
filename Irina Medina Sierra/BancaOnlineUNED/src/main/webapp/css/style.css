@@ -1,0 +1,39 @@
+/*
+    Created on : 08/05/2022
+    Author     : Irina Medina Sierra
+*/
+/* ------ GOOGLE FONTS ------ */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+/* ----- MATERIAL ICONS ----- */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.header{
+    height:15%;
+}
+body {
+    background-color: #F2F2F2;
+}
+.negro {
+    background-color: #2B2B2D;
+    font-size: 45px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.naranja {
+    color: #ffb500;
+}
+.boton{
+    background-color: #3ea792;
+}
+input[type="text"], input[type="email"],input[type="number"], input[type="tel"] {
+    border-bottom: 1px solid #3ea792 !important;
+    border-radius: 0 !important;
+}
+.subtexto {
+    font-size: 13px !important;
+}
+input[type="email"]::placeholder{
+    text-transform: uppercase;
+}

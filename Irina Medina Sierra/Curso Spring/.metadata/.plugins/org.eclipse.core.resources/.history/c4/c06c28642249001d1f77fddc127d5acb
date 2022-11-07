@@ -1,0 +1,44 @@
+package es.uned.master.java.controller;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class Juego implements Ijuego{
+	
+	private static int maximo = 6;
+	
+	
+	@Override
+	public int identificarJugador(int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int posicionActual(int casilla) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int lanzarDato(int numeroDado) {
+		int resultado = (int) ((Math.random() * maximo) + 1);
+		return resultado;
+	}
+
+	@Override
+	public int leerCasilla(int casilla, int categoria) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int pregunta(int idPregunta, String Pregunta, String opcion1, String opcion2, String opcion3, String opcion4,
+			String Correcta) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+	
+}

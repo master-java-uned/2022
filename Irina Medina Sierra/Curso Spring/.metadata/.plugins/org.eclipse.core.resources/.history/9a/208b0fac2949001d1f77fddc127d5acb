@@ -1,0 +1,9 @@
+package es.uned.master.java.controller;
+
+import org.springframework.data.repository.CrudRepository;
+
+import es.uned.master.java.models.Tablero;
+
+public interface Itablero extends CrudRepository<Tablero, Integer> {
+
+}

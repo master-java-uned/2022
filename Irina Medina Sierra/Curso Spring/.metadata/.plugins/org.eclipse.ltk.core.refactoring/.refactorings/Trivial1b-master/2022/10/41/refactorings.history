@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;dado.gif&apos; to &apos;images&apos;&#x0A;- Original project: &apos;Trivial1b-master&apos;&#x0A;- Destination element: &apos;images&apos;&#x0A;- Original element: &apos;dado.gif&apos;" description="Copy file" element1="trivial1bWeb/public/images/dado.gif" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1665563565358" target="/trivialGameUned/src/main/resources/static/images" units="0" version="1.0"/>
+</session>

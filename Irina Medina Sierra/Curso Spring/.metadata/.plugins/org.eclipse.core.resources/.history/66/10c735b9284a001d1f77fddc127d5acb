@@ -1,0 +1,45 @@
+package es.uned.master.java.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+@Controller
+@RequestMapping
+public class Controlador {
+	
+	@Autowired
+	private Ijuego service;
+	
+	private static int posicionInicial=0;
+	
+//Partimos que el Jugador sale de la casilla 1, por lo que el primer dado indica la posición de Salida
+	
+	@GetMapping("/index")
+	public void partida (Model model) {
+		
+		int dado=llamarDado(model);
+		int posicionActual=0;
+		model.addAttribute("dado",dado);
+
+		//Indicamos a que posicion quiere moverse
+		posicionActual=posicionInicial+posicionActual;
+		
+		model.addAttribute("posicionActual",posicionActual);
+		int posicion1=service.posicionesPropuestas1(posicionActual,dado);
+		model.addAttribute("posicion",posicion1);
+		int posicion2=service.posicionesPropuestas2(posicionActual,dado);
+		model.addAttribute("posicion2",posicion2);
+		
+	}
+	@GetMapping("/index")
+	public int llamarDado (Model model) {
+		int leerDado=service.lanzarDato();
+		return leerDado;
+	
+	}
+	
+}

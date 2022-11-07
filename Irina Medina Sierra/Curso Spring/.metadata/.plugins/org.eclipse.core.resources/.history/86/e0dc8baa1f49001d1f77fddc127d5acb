@@ -1,0 +1,27 @@
+package es.uned.master.java;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import es.uned.java.master.DemoConsolaApplication;
+import es.uned.java.master.service.IPersonaService;
+import es.uned.master.java.controller.Ijuego;
+import es.uned.master.java.controller.Itablero;
+
+@SpringBootApplication
+public class TrivialGameUnedApplication implements CommandLineRunner{
+
+	private static Logger LOG = LoggerFactory.getLogger(TrivialGameUnedApplication.class);
+	
+	@Autowired
+	private Ijuego service;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(TrivialGameUnedApplication.class, args);
+	}
+
+}

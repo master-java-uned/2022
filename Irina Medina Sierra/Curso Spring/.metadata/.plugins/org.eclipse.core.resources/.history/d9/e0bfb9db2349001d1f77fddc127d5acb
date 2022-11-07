@@ -1,0 +1,23 @@
+package es.uned.master.java;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+import es.uned.master.java.controller.Ijuego;
+
+@SpringBootApplication
+public class TrivialGameUnedApplication {
+
+	@Autowired
+	private Ijuego partida;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(TrivialGameUnedApplication.class, args);
+
+	}
+
+	
+	
+}
