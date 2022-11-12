@@ -21,6 +21,7 @@ import es.uned.master.java.models.PreguntasOpciones;
 import es.uned.master.java.models.Tablero;
 import es.uned.master.java.repository.JugadoresRepository;
 import es.uned.master.java.repository.PreguntasOpcionesRepository;
+import es.uned.master.java.repository.PreguntasRepository;
 import es.uned.master.java.repository.TableroRepository;
 
 
@@ -44,6 +45,8 @@ public class Controlador {
 	PreguntasOpcionesRepository pregOpcRepository;
 	@Autowired
 	JugadoresRepository jugadoresRepository;
+	@Autowired
+	PreguntasRepository preguntasRepository;
 	
 	int partida=0;
 	int posicion=0;
@@ -66,6 +69,11 @@ public class Controlador {
 			model.addAttribute("posicionActual",posicionActual);
 			model.addAttribute("mensaje","LANZA EL DADO PARA JUGAR COMENZAR EL JUEGO");
 			nuevoJuego=false;
+			service.insertTablero();
+			service.insertPreguntas();
+			service.insertPreguntasOpciones();
+			
+			service.reestablecerPreguntasUtilizadas();
 		}else {
 	    
 			//llamamos al dado
@@ -119,9 +127,7 @@ public class Controlador {
 			pregunta = service.getPregunta(tab.getCategoria());
 		if(pregunta != null) {
 			partida++;
-			
-			/*if(tab.isQuesito())*/
-			
+						
 			model.addAttribute("partida",partida);
 			model.addAttribute("pregunta",pregunta.getPregunta());
 			

@@ -18,6 +18,10 @@ public interface Ijuego {
 	public int  leerCasilla(int casilla, int categoria);
 	public Preguntas getPregunta(ECategoria categoria);
 	public boolean checkRespuesta(List<PreguntasOpciones> opciones, int respuesta);
+	void insertPreguntas();
+	void insertTablero();
+	void insertPreguntasOpciones();
+	void reestablecerPreguntasUtilizadas();
 	
 
 }

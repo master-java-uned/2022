@@ -27,14 +27,17 @@ public class Preguntas {
 	@Column(nullable=false, columnDefinition="boolean default false")
 	private boolean utilizada;
 
-	public Preguntas(int id, ECategoria categoria, String pregunta, List<PreguntasOpciones> opciones) {
+	public Preguntas(int id, int categoria, String pregunta) {
 		this.id = id;
-		this.categoria = categoria;
+		this.categoria = ECategoria.fromId(categoria);
 		this.pregunta = pregunta;
-		this.opciones = opciones;
 	}
 	
 	public Preguntas() {}
+	
+	public Preguntas(int id) {
+		this.id = id;
+	}
 
 	public int getId() {
 		return id;

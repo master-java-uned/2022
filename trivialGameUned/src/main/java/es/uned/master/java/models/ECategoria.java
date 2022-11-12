@@ -7,5 +7,14 @@ public enum ECategoria {
 	SEÑOR_ANILLOS,
 	MARVEL,
 	DISNEY,
-	DADO
+	DADO;
+	
+	private static ECategoria[] cachedValues = null;
+
+    public static ECategoria fromId(int id) {
+    	if(ECategoria.cachedValues == null) {
+    		ECategoria.cachedValues = ECategoria.values();
+        }
+        return ECategoria.cachedValues[id];
+    }
 }

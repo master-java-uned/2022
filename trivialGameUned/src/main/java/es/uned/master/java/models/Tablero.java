@@ -13,15 +13,17 @@ public class Tablero {
 	
 	@Id
 	private int casilla;
-	public Tablero(int casilla, ECategoria categoria) {
-		this.casilla = casilla;
-		this.categoria = categoria;
-	}
-	public Tablero() {};
 	@Enumerated(EnumType.ORDINAL)
 	private ECategoria categoria;
 	private boolean quesito;
 	
+	public Tablero(int casilla, int categoria, boolean quesito) {
+		this.casilla = casilla;
+		this.categoria = ECategoria.fromId(categoria);
+		this.quesito = quesito;
+	}
+	
+	public Tablero() {}
 	public int getCasilla() {
 		return casilla;
 	}

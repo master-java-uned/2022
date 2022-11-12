@@ -17,16 +17,15 @@ public class PreguntasOpciones {
     @JoinColumn(name="pregunta_id")
 	private Preguntas pregunta;
 
-	public PreguntasOpciones(int id, String opcion, int correcta, Preguntas pregunta) {
+	public PreguntasOpciones(int id, int correcta, String opcion, int idPregunta) {
 		super();
 		this.id = id;
 		this.opcion = opcion;
 		this.correcta = correcta;
-		this.pregunta = pregunta;
+		this.pregunta = new Preguntas(idPregunta);
 	}
 	
 	public PreguntasOpciones() {}
-	
 	public int getId() {
 		return id;
 	}
